@@ -5,7 +5,7 @@ export class ConfigDB {
       layout_class: "compact-wrapper",
       sidebar: {
         iconType: "stroke",
-      }, 
+      },
       sidebar_setting: "default-sidebar",
     },
     color: {
