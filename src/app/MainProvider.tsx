@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component<MainProviderProps, ErrorBoundaryStat
     super(props);
     this.state = { hasError: false };
   }
+  
 
   static getDerivedStateFromError(error: Error) {
     return { hasError: true };
@@ -37,6 +38,7 @@ class ErrorBoundary extends React.Component<MainProviderProps, ErrorBoundaryStat
 
   render() {
     if (this.state.hasError) {
+      console.log("hasError",this.state.hasError)
       return <Error403Container />
     }
 

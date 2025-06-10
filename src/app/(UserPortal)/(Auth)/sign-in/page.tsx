@@ -21,6 +21,7 @@ interface loginValidation {
 const userSignInPage = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
+  console.log("searchParams",searchParams)
   const tokenHashFromURL = searchParams.get('token_hash') || "";
   const erroMessageURL = searchParams.get('error-message');
   const messageURL = searchParams.get('message')

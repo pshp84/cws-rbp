@@ -44,7 +44,9 @@ export default async function RootLayout({
 }) {
   const lng = await detectLanguage();
   const session = await getServerSession(authoption);
+  console.log("session",session)
   const tokenizationURL = process.env.NEXT_PUBLIC_BANQUEST_TOKENIZATION_URL;
+  console.log("tokenizationURL",tokenizationURL)
 
   return (
     <I18nProvider language={lng}>
