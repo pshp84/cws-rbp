@@ -279,23 +279,23 @@ const userSignInPage = () => {
     verifyUser();
   }, [tokenHashFromURL])
 
-  useEffect(() => {
-    if (!erroMessageURL || erroMessageURL == "") return;
-    toast.error(erroMessageURL);
-    const currentParams = new URLSearchParams(searchParams.toString());
-    currentParams.delete('error-message');
-    const newUrl = `${window.location.pathname}?${currentParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
-  }, [erroMessageURL]);
+  // useEffect(() => {
+  //   if (!erroMessageURL || erroMessageURL == "") return;
+  //   toast.error(erroMessageURL);
+  //   const currentParams = new URLSearchParams(searchParams.toString());
+  //   currentParams.delete('error-message');
+  //   const newUrl = `${window.location.pathname}?${currentParams.toString()}`;
+  //   router.replace(newUrl, { scroll: false });
+  // }, [erroMessageURL]);
 
-  useEffect(() => {
-    if (!messageURL || messageURL == "") return;
-    toast.success(messageURL);
-    const currentParams = new URLSearchParams(searchParams.toString());
-    currentParams.delete('message');
-    const newUrl = `${window.location.pathname}?${currentParams.toString()}`;
-    router.replace(newUrl, { scroll: false });
-  }, [messageURL]);
+  // useEffect(() => {
+  //   if (!messageURL || messageURL == "") return;
+  //   toast.success(messageURL);
+  //   const currentParams = new URLSearchParams(searchParams.toString());
+  //   currentParams.delete('message');
+  //   const newUrl = `${window.location.pathname}?${currentParams.toString()}`;
+  //   router.replace(newUrl, { scroll: false });
+  // }, [messageURL]);
 
   return (
     <>
