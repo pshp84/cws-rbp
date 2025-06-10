@@ -1,0 +1,1169 @@
+@import "../public/assets/scss/app.scss";
+
+// User Portal Styles
+.rbp-user-portal {
+  --bs-primary: #5e80fa;
+  --bs-primary-rgb: 94, 128, 250;
+  --bs-secondary: #424242;
+  --bs-secondary-rgb: 66, 66, 66;
+  --bs-dark: #151515;
+  --bs-dark-rgb: 21, 21, 21;
+  --bs-light: #f4f4f4;
+  --bs-light-rgb: 244, 244, 244;
+  --bs-danger: #b12704;
+  --bs-danger-rgb: 177, 39, 4;
+  --bs-teal: #d1fd64;
+  --bs-teal-rgb: 209, 253, 100;
+  --theme-default: #5e80fa;
+  --theme-green: #d1fd64;
+  --theme-secondary: #424242;
+  --bs-heading-color: #151515;
+  --bs-card-cap-color: #151515;
+  --bs-card-color: #151515;
+  --bs-secondary-text: #808080;
+
+  font-family: "Sora", sans-serif;
+  color: var(--bs-secondary);
+  font-size: 14px;
+  font-weight: 400;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-weight: 700;
+  }
+
+  .f-w-500 {
+    font-weight: 500;
+  }
+
+  .f-w-600 {
+    font-weight: 600;
+  }
+
+  .ff-sora {
+    font-family: "Sora", sans-serif;
+  }
+
+  .ff-sora-thin {
+    font-weight: 100;
+  }
+
+  .ff-sora-extralight {
+    @extend .ff-sora;
+    font-weight: 200;
+  }
+
+  .ff-sora-light {
+    @extend .ff-sora;
+    font-weight: 300;
+  }
+
+  .ff-sora-regular {
+    @extend .ff-sora;
+    font-weight: 400;
+  }
+
+  .ff-sora-medium {
+    @extend .ff-sora;
+    font-weight: 500;
+  }
+
+  .ff-sora-semibold {
+    @extend .ff-sora;
+    font-weight: 600;
+  }
+
+  .ff-sora-bold {
+    @extend .ff-sora;
+    font-weight: 700;
+  }
+
+  .ff-sora-extrabold {
+    @extend .ff-sora;
+    font-weight: 800;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .f-s-12 {
+    font-size: 12px !important;
+  }
+
+  .f-s-10 {
+    font-size: 10px !important
+  }
+
+  .btn {
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+  }
+
+  .mobile-menu {
+    justify-items: flex-start !important;
+  }
+
+  // button.btn.btn-outline-primary.mt-2.w-100.btn-sm.dashboard-badge.rbp-user-prtal-buttons:focus {
+  //   background-color: var(--theme-default) !important;
+  //   border-color: var(--theme-default) !important;
+  //   color: white !important;
+  // }
+
+  // button.btn.btn-outline-primary.mt-4.btn-sm.deals-text.buy-width:focus {
+  //   background-color: white !important;
+  //   border-color: var(--theme-default) !important;
+  // }
+
+  // button.btn.btn-outline-primary.btn-sm.deals-text:focus {
+  //   background-color: white !important;
+  //   border-color: var(--theme-default) !important;
+  // }
+
+  // button.btn.btn-outline-primary.btn-sm:focus {
+  //   background-color: white !important;
+  //   border-color: var(--theme-default) !important;
+  //   color: var(--theme-default) !important;
+  // }
+
+  // button.btn.btn-outline-primary.mt-2.w-100.btn-sm.dashboard-badge.rbp-user-prtal-buttons:focus{
+  //   color: white !important;
+  // }
+
+  .btn-outline-primary {
+    border-color: var(--theme-default) !important;
+    color: var(--theme-default) !important;
+    background-color: transparent !important;
+
+    &:active {
+      border-color: var(--theme-default) !important;
+      color: var(--bs-light) !important;
+      background-color: var(--theme-default) !important;
+    }
+
+    &:focus {
+      border-color: var(--theme-default) !important;
+      color: var(--bs-light) !important;
+      background-color: var(--theme-default) !important;
+    }
+
+    &:hover {
+      border-color: var(--theme-default) !important;
+      color: var(--bs-light) !important;
+      background-color: var(--theme-default) !important;
+    }
+  }
+
+  .btn-outline-secondary {
+    border-color: #f5f5f5 !important;
+    color: var(--bs-dark) !important;
+    background-color: #f5f5f5 !important;
+
+    &:active {
+      background-color: var(--theme-secondary) !important;
+      border-color: var(--theme-secondary) !important;
+      color: var(--bs-light) !important;
+    }
+
+    &:hover {
+      background-color: var(--theme-secondary) !important;
+      border-color: var(--theme-secondary) !important;
+      color: var(--bs-light) !important;
+    }
+
+    &:focus {
+      background-color: var(--theme-secondary) !important;
+      border-color: var(--theme-secondary) !important;
+      color: var(--bs-light) !important;
+    }
+  }
+
+  .btn-light {
+    background-color: var(--bs-light) !important;
+    border-color: var(--bs-light) !important;
+  }
+
+  .text-green {
+    color: var(--theme-green);
+  }
+
+  .text-muted {
+    color: #a8a8a8 !important;
+  }
+
+  .bg-green {
+    background-color: var(--theme-green);
+    color: var(--bs-heading-color);
+  }
+
+  .bg-white-transparent {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .z-index-5 {
+    z-index: 1081;
+  }
+
+  .min-vh-25 {
+    min-height: 25vh;
+  }
+
+  .min-vh-50 {
+    min-height: 50vh;
+  }
+
+  .min-vh-75 {
+    min-height: 75vh;
+  }
+
+  .border-dashed {
+    &.border {
+      border-style: dashed !important;
+    }
+
+    &.border-bottom {
+      border-bottom-style: dashed !important;
+    }
+
+    &.border-top {
+      border-top-style: dashed !important;
+    }
+
+    &.border-start {
+      border-left-style: dashed !important;
+    }
+
+    &.border-end {
+      border-right-style: dashed !important;
+    }
+  }
+
+  .border-primary {
+    border-color: var(--bs-primary) !important;
+  }
+
+  .progress-main {
+    width: 100%;
+    max-width: 524px;
+  }
+
+  .progress-align {
+    margin-left: 3rem !important;
+    margin-top: -1rem !important;
+    height: 8px;
+  }
+
+  .progress-complete {
+    margin-left: 9rem !important;
+  }
+
+  .validation-size {
+    font-size: 14px !important;
+  }
+
+  .progress-bg {
+    background-color: #f1c21b !important;
+  }
+
+  &.user-portal-signup {
+    background-color: #f0f2f4;
+  }
+
+  .user-header {
+    background-color: rgba(43, 50, 65, 1) !important;
+
+    .logo {
+      font-weight: 600;
+      line-height: initial;
+      font-size: 17px;
+    }
+
+    .nav {
+      .nav-item {
+        &>.nav-link {
+          color: #ffffff;
+        }
+
+        &>.nav-link:not(.nav-notifications-link):not(.nav-profile-link) {
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 1px;
+            width: 0%;
+            background-color: var(--theme-green);
+            display: block;
+          }
+        }
+
+        &.nav-item-separator {
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 50%;
+            width: 1px;
+            background-color: #ffffff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+          }
+        }
+
+        &:hover .nav-link:not(.nav-notifications-link):not(.nav-profile-link),
+        .nav-link.active {
+          color: var(--theme-green);
+
+          &::after {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+
+    .new-button {
+      background-color: rgba(94, 128, 250, 1) !important;
+      border-radius: 50px !important;
+      //border-color: rgba(0, 0, 0, 0) !important;
+      padding: 10px 30px;
+      color: #fff !important;
+    }
+
+    .new-button:hover {
+      border-color: #fff !important;
+      background-color: #fff !important;
+      color: rgba(94, 128, 250, 1) !important;
+    }
+  }
+
+  .user-footer {
+    background-color: rgba(43, 50, 65, 1) !important;
+
+    .user-footer-links {
+
+      a,
+      p {
+        font-size: 15px;
+      }
+
+      .footer-about-us p {
+        line-height: 28.1px;
+      }
+
+      .footer-contact i {
+        font-size: 18px;
+      }
+
+      a:hover {
+        color: var(--theme-green) !important;
+      }
+    }
+
+    .user-footer-copyright .container {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        box-shadow: 0 20px 0 0 #ffffff;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 20px;
+      }
+
+      &::before {
+        left: -20px;
+        border-bottom-right-radius: 20px;
+      }
+
+      &::after {
+        right: -20px;
+        border-bottom-left-radius: 20px;
+      }
+    }
+  }
+
+  .user-signup-page,
+  .user-signin-page {
+
+    .my-list {
+      list-style-type: disc !important;
+      list-style-position: outside;
+      padding-left: 1em;
+    }
+
+
+    .bg-light {
+      background-color: #f6f6f6 !important;
+      color: var(--bs-secondary) !important;
+    }
+
+    label {
+      color: #3d434a;
+      @extend .ff-sora-regular;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+
+    input,
+    select {
+      padding: 10px 12px;
+      border-color: rgba(var(--bs-primary-rgb), 0.5);
+      border-style: dashed;
+
+      &.is-invalid {
+        border-color: rgba(var(--bs-danger-rgb), 0.5);
+      }
+
+      &.is-valid {
+        border-color: rgba(var(--bs-success-rgb), 0.5);
+      }
+
+      &::placeholder {
+        color: #a8a8a8;
+        opacity: 1;
+      }
+
+      &::-ms-input-placeholder {
+        color: #a8a8a8;
+        opacity: 1;
+      }
+    }
+
+    .password-visibility-btn {
+      right: 10px;
+    }
+
+    .password-validation-notice {
+      color: #e24949;
+    }
+
+    .card .card-body {
+      padding: 54px;
+    }
+
+    .notification ul::before {
+      height: calc(100% - 115px);
+    }
+
+    .activity-dot-primary {
+      background-color: var(--bs-primary);
+      outline: 5px solid rgba(var(--bs-primary-rgb), 0.25);
+    }
+
+    .activity-dot-secondary {
+      background-color: #9d9d9d;
+      outline: 5px solid #f0f2f4;
+    }
+
+    .signup-action-bar button {
+      padding: 8px 24px;
+
+      &.btn-light {
+        color: var(--bs-dark);
+        background-color: #f1f0f8 !important;
+      }
+    }
+
+    .signup-verification-step {
+      small {
+        font-size: 12px;
+      }
+
+      .check-email-notifications {
+        .email-icon {
+          height: 56px;
+          width: 56px;
+          background-color: var(--theme-green);
+          color: #fff;
+          font-size: 28px;
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba(var(--bs-teal-rgb), 0.3);
+            animation: round 1.3s ease-in-out infinite;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+
+    .signup-payment-step {
+      #banquest-credit-card-container {
+        height: 105px;
+      }
+    }
+
+    .signup-enrollment-step {}
+  }
+
+  .user-dashboard-page {
+    .pending-actions {
+      flex-basis: 72%;
+    }
+
+    .pending-action-plaid {
+      flex-basis: 83%;
+    }
+
+    .remaining-badge {
+      background-color: var(--bs-teal) !important;
+      padding: 8px;
+    }
+
+    .all-font {
+      font-size: 12px !important;
+    }
+
+    .all-font.btn:focus,
+    .all-font.btn:active {
+      box-shadow: none;
+      border-color: #6c757d;
+      background-color: transparent;
+    }
+
+    .all-font.btn:hover {
+      background-color: #f8f9fa;
+      border-color: #6c757d;
+    }
+
+    .slider-bg {
+      background-color: turquoise !important;
+    }
+
+    .dashboard-badge {
+      font-family: "Sora", sans-serif !important;
+    }
+
+    .list-color {
+      color: #b12704;
+      font-size: 19px;
+      font-style: normal;
+    }
+
+    .custom-width {
+      width: 88px !important;
+    }
+
+    .dashboard-slider {
+      border-radius: 15px;
+      overflow: hidden;
+      //height: 400px !important;
+    }
+
+    .dashboard-slider .carousel-content {
+      height: auto;
+    }
+
+    .carousel-image-wrapper {
+      //height: 200px;
+    }
+
+    .carousel-text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      padding-left: 1rem;
+    }
+
+    @media (min-width: 576px) {
+      .carousel-image-wrapper {
+        // height: 250px;
+      }
+
+      .carousel-text-overlay {
+        padding-left: 2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .dashboard-slider .carousel-content {
+        // height: 300px;
+      }
+
+      .carousel-image-wrapper {
+        height: 100%;
+      }
+
+      .carousel-text-overlay {
+        padding-left: 3rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .dashboard-slider .carousel-content {
+        // height: 350px;
+      }
+
+      .carousel-text-overlay {
+        padding-left: 4rem;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .dashboard-slider .carousel-content {
+        // height: 400px;
+      }
+
+      .carousel-text-overlay {
+        padding-left: 6rem;
+      }
+    }
+
+    .object-fit-cover {
+      object-fit: cover;
+    }
+
+    @media (max-width: 767.98px) {
+      .carousel-text-overlay h3 {
+        font-size: 1.5rem;
+      }
+
+      .carousel-text-overlay p {
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .user-deals-page {
+    .deals-text {
+      font-family: "Sora", sans-serif !important;
+    }
+
+    .deals-price {
+      color: #b12704;
+      font-size: 19px;
+      font-style: normal;
+    }
+
+    .category-text {
+      font-size: 15px;
+    }
+
+    .details {
+      font-size: 20px;
+    }
+
+    // .checkbox_animated :checked ::after {
+    //   background-color: var(--bs-primary);
+    //   border: 2px solid #fff;
+    // }
+
+    .checkbox_animated:after {
+      border: 1px solid #d9d9d9 !important;
+      border-radius: 8px !important;
+    }
+
+    .checkbox_animated :checked {
+      background-color: #5e80fa !important;
+    }
+
+    .category {
+      padding-left: 0px !important;
+    }
+
+    /* Custom Checkbox Style */
+    .category-checkbox {
+      display: none;
+      /* Hide the default checkbox */
+    }
+
+    .category-checkbox+.form-check-label {
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #000000;
+      user-select: none;
+    }
+
+    .category-checkbox+.form-check-label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #ffffff;
+      border: 1px solid #d9d9d9 !important;
+      border-radius: 8px !important;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .category-checkbox:checked+.form-check-label::before {
+      background-color: #5e80fa;
+      border-color: #5e80fa;
+    }
+
+    .category-checkbox:checked+.form-check-label::after {
+      content: "✔";
+      position: absolute;
+      left: 6px;
+      top: 0;
+      color: white;
+      font-size: 14px;
+    }
+
+    .borderLight {
+      border: 2px solid #f4f4f4;
+      border-radius: 0.5rem;
+    }
+
+    select.sortSelect {
+      font-weight: bold !important;
+      padding-left: 0.35rem;
+    }
+
+    select.sortSelect:focus {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .dealsSetupDiv {
+      padding-right: 1rem !important;
+    }
+  }
+
+  .user-deals-details-page {
+    .breadcrumb-font {
+      font-size: 13px !important;
+    }
+
+    .product-img {
+      max-width: 445px !important;
+      height: auto !important;
+    }
+
+    .deals-text {
+      font-family: "Sora", sans-serif !important;
+    }
+
+    .deals-price {
+      color: #b12704 !important;
+      font-size: 19px !important;
+      font-style: normal;
+    }
+
+    .buy-width {
+      width: 214px !important;
+    }
+  }
+
+  .user-reward-points-page {
+    .points-text {
+      color: #797979;
+      font-size: 14px !important;
+    }
+
+    .table-color {
+      background-color: #f5f5f6 !important;
+    }
+  }
+
+  .carousel-control-prev-icon {
+    margin-left: -8rem !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 81px !important;
+    margin-right: 0.6rem !important;
+  }
+
+  .carousel-control-next-icon {
+    margin-right: -8rem !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 81px !important;
+    margin-left: 0.6rem !important;
+  }
+
+  .page-link {
+    color: var(--theme-default) !important;
+  }
+  .active>.page-link,
+  .page-link.active {
+    background-color: var(--theme-default) !important;
+    border-color: var(--theme-default) !important;
+    color: #fff !important;
+  }
+
+  .crumb-link {
+    transition: color 0.3s ease;
+  }
+
+  .crumb-link:hover {
+    color: var(--theme-default) !important;
+  }
+
+  // Responsive design user sign-in screen
+  @media (max-width: 991px) {
+    .user-signin-page {
+      .card .card-body {
+        padding: 16px 24px;
+      }
+
+      .card-res {
+        padding-left: 0.7rem !important;
+        border-left-style: none !important;
+        margin-top: 40px !important;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-signin-page {
+      .card .card-body {
+        padding: 16px 24px;
+      }
+
+      .card-res {
+        padding-left: 0.7rem !important;
+        border-left-style: none !important;
+        margin-top: 40px !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-signup-page {
+      .dark-timeline {
+        overflow: scroll;
+        scrollbar-width: none;
+      }
+
+      .signup-plan-selection {
+        margin-top: 20px;
+      }
+
+      .sm-ms {
+        margin-left: 0rem !important;
+      }
+
+      .card .card-body {
+        padding: 16px 24px;
+      }
+
+      .activity-dot-primary {
+        outline: none !important;
+        background-color: white !important;
+      }
+
+      .activity-dot-secondary {
+        outline: none !important;
+        background-color: white !important;
+      }
+
+      .notification ul::before {
+        height: 0px !important;
+      }
+
+      .border-end {
+        border-right-style: none !important;
+      }
+
+      .notification li {
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .simple-list {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        width: max-content;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-signup-page {
+      .dark-timeline {
+        overflow: scroll;
+        scrollbar-width: none;
+      }
+
+      .signup-plan-selection {
+        margin-top: 20px;
+      }
+
+      .sm-ms {
+        margin-left: 0rem !important;
+      }
+
+      .card .card-body {
+        padding: 16px 24px;
+      }
+
+      .activity-dot-primary {
+        outline: none !important;
+        background-color: white !important;
+      }
+
+      .activity-dot-secondary {
+        outline: none !important;
+        background-color: white !important;
+      }
+
+      .notification ul::before {
+        height: 0px !important;
+      }
+
+      .border-end {
+        border-right-style: none !important;
+      }
+
+      .notification li {
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .simple-list {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        width: max-content;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-dashboard-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-dashboard-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-deals-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-deals-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-deals-details-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-deals-details-page {
+      .mobile-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        overflow: scroll;
+        scrollbar-width: none !important;
+      }
+
+      .mobile-row .col {
+        width: auto !important;
+      }
+
+      .mobile-row .col .d-flex {
+        width: 100%;
+        max-width: 210px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-reward-points-page {
+      .pagination-mobile {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      .pagination-mobile-row {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      .pagination-controls {
+        width: 100% !important;
+        margin-top: 0.5rem !important;
+        margin-left: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-reward-points-page {
+      .pagination-mobile {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      .pagination-mobile-row {
+        display: flex !important;
+        width: 100% !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+      }
+
+      .pagination-controls {
+        width: 100% !important;
+        margin-top: 0.5rem !important;
+        display: flex;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user-profile-page {
+      .tab-view {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .user-profile-page {
+      .tab-view {
+        margin-top: 1rem !important;
+      }
+    }
+  }
+
+  .user-lease-document {
+    .document-content {
+      border: 1px dashed;
+      border-color: #e4e4e7;
+      background-color: rgba(241, 245, 255, 0.5) !important;
+      border-radius: 6px;
+    }
+
+    .browse-text {
+      color: #0c428f !important;
+    }
+
+    .supported-text {
+      color: #a3a3a3 !important;
+    }
+  }
+
+  .user-rent-screen {
+    .date_dropdown {
+      height: 45px !important;
+      border-radius: 0.375rem !important;
+      width: 100% !important;
+      display: block !important;
+      line-height: 1.5 !important;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+    }
+
+    .date_dropdown:focus {
+      padding: 10px 12px !important;
+      border-color: rgba(94, 128, 250, 0.5) !important;
+      border-style: dashed !important;
+    }
+  }
+}
+
+// EOF User Portal Styles

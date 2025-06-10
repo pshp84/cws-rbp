@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0;" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+    body {
+      font-family: "Sora", sans-serif;
+      background-color: #f0f2f4;
+      color: #828282;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #F6F6F6;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #CCC;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 8px 10px;
+    }
+  </style>
+</head>
+
+<body
+  style="margin: 0; padding: 20px 0; background-color: #5E80FA; font-family: 'Helvetica Neue', Arial, sans-serif !important; line-height: 1.6;">
+  <div class="email-wrapper"
+    style="max-width: 600px; margin: 0 auto; background: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(43, 50, 65, 0.1);">
+    <div class="header" style="background: #2B3241; padding: 40px 20px; text-align: center;">
+      <h1 style="margin: 0; font-size: 32px; letter-spacing: -0.5px;">
+        <a href="https://www.rentersbp.com" style="text-decoration: none;color: #D1FD64;">RBP Club</a>
+      </h1>
+      <p style="color: #FFFFFF; margin: 8px 0 0; font-size: 18px; opacity: 0.9;">Rent Smarter. Save More. Live Better.
+      </p>
+    </div>
+    <div>
+      <!-- <div
+        style="background-color: #5e80fa; padding: 30px 20px; box-sizing: border-box; height: 123px; text-align: center; display: table; width: 100%; max-width: 600px;">
+        <div style="display: table-cell; vertical-align: middle; text-align: center; width: 100%;">
+          <div style="display: inline-block; vertical-align: middle; margin-right: 10px;">
+            <img src="cid:logo-image-cid" alt="RBP Club Logo"
+              style="width: 41px; height: 43px; vertical-align: middle;" />
+            <div
+              style="font-family: 'Sora', sans-serif; font-size: 24px; font-weight: bold; color: white; display: inline-block; vertical-align: middle;">
+              RBP Club
+            </div>
+          </div>
+
+          <div
+            style="font-family: 'Sora', sans-serif; font-size: 16px; color: white; vertical-align: middle; padding-top: 10px;">
+            Where Smart Shopping Begins
+          </div>
+        </div>
+      </div> -->
+
+      <div style="padding: 20px; width: 100%; box-sizing: border-box; background-color: white;">
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">
+          Hello <span style="font-weight: bold;">{{userName}}</span>,
+        </p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">Welcome to <span class="highlight"
+            style="color: #5E80FA; font-weight: 600;">RBP
+            Club</span> Affiliate Program! We're thrilled to have you on board.</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">Here's everything you need to get started:</p>
+
+        <table style="width: 100%; border: 1px solid #CCC; border-collapse: collapse;">
+          <tr>
+            <td style="border: 1px solid #CCC; padding: 8px 10px; text-align: left;font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: medium !important;
+    color: #2B3241 !important;line-height: 1.6; width: 170px;">Your Referral Code
+            </td>
+            <td style="border: 1px solid #CCC; padding: 8px 10px; text-align: left; font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: medium !important;
+    color: #2B3241 !important;line-height: 1.6;">{{referralCode}}</td>
+          </tr>
+          <tr style="background-color: #F6F6F6;">
+            <td style="border: 1px solid #CCC; padding: 8px 10px; text-align: left; font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: medium !important;
+    color: #2B3241 !important;line-height: 1.6;">Your Referral Link</td>
+            <td style="border: 1px solid #CCC; padding: 8px 10px; text-align: left; font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: medium !important;
+    color: #2B3241 !important;line-height: 1.6;">{{referralLink}}</td>
+          </tr>
+        </table>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">Share this link with your audience and start earning rewards for
+          every successful referral!</p>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">Before you begin, please confirm your email address to activate
+          your account:</p>
+
+        <a href="{{confirmEmailAddressLink}}" class="button"
+          style="display: inline-block; background: #D1FD64; padding: 14px 32px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0px 0px 5px 0; transition: transform 0.2s ease; color: #2B3241;">Confirm
+          Email Address</a>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">Once your email is confirmed, you'll be able to log in using the
+          password provided by the admin. If you ever forget your password, you can reset it anytime using the "Forgot
+          Password" option on the login page.</p>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+        font-size: medium !important;
+        color: #2B3241 !important;line-height: 1.6;">By confirming, you'll gain full access to your affiliate
+          dashboard, where you can track clicks, referrals, and payouts.</p>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+font-size: medium !important;
+color: #2B3241 !important;line-height: 1.6;">If you have any questions or need assistance, feel free to reach out to
+          our support team.</p>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+font-size: medium !important;
+color: #2B3241 !important;line-height: 1.6;">Happy Referring!</p>
+
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif !important;
+          font-size: medium !important;
+          color: #2B3241 !important;line-height: 1.6;">Best regards,<br>
+          <strong>The RBP Club Team</strong>
+        </p>
+
+
+      </div>
+
+      <!-- <div
+        style="width: 100%; background-color: #f6f6f6; padding: 14px 20px; box-sizing: border-box; font-size: 16px; font-weight: 500; max-width: 600px;">
+        <div style="margin: 0 auto; display: flex; justify-content: space-between;">
+          <div style="color: #828282; font-family: 'Sora', sans-serif;">
+            <div style="margin-bottom: 10px; font-weight: bold;">GDPR Compliance:</div>
+            <button
+              style="font-size: 16px; background-color: #5e80fa; color: white; border: none; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-bottom: 10px; font-family: 'Sora', sans-serif;">
+              Data Protection
+            </button>
+            <div>
+              For more details, please visit our<br />
+              <a href="#" style="color: blue; text-decoration: none; font-family: 'Sora', sans-serif;">Privacy
+                Policy</a>
+            </div>
+          </div>
+
+          <div style="margin-left: auto; color: #828282; font-family: 'Sora', sans-serif;">
+            <div style="margin-bottom: 5px;">
+              <span style="color: black;">Email:</span>
+              <a href="mailto:customercare@rentersbp.com"
+                style="color: #828282; text-decoration: none; font-family: 'Sora', sans-serif;">customercare@rentersbp.com</a>
+            </div>
+            <div style="margin-bottom: 5px;"><span style="color: black;">Phone:</span> (727) 200-6252</div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="footer"
+      style="background: #2B3241; padding: 30px 20px; text-align: center; font-size: 14px; color: rgba(255,255,255,0.85);">
+      <p style="font-family:'Helvetica Neue', Arial, sans-serif !important;line-height: 1.6;">You’re receiving this
+        email at <a href=`mailto:{{userEmail}}` style="text-decoration: none; color: #5E80FA;">{{userEmail}}</a> <br>in
+        connection with your membership at RBP
+        Club.</p>
+      <p style="font-family:'Helvetica Neue', Arial, sans-serif !important;line-height: 1.6;">Need help? Contact <a
+          href="mailto:customercare@rentersbp.com" style="text-decoration: none; color: #5E80FA;">Support</a> or call <a
+          href="tel:+17272006252" style="text-decoration: none; color: #5E80FA;">(727) 200-6252</a></p>
+      <p style="font-family:'Helvetica Neue', Arial, sans-serif !important;line-height: 1.6;">RBP Club <br>411 Boulevard
+        of the
+        Americas, Suite 208 <br>Lakewood, NJ 08701</p>
+      <p style="margin-top: 20px;" style="font-family:'Helvetica Neue', Arial, sans-serif !important;line-height: 1.6;">
+        <!-- <a href="https://www.rentersbp.com/privacy-policy"
+      style="text-decoration: none; color: #5E80FA;">Privacy</a><span class="footer-divider"
+      style="color: #5E80FA; margin: 0 8px;">|</span>
+    <a href="https://www.rentersbp.com/terms-of-service"
+      style="text-decoration: none; color: #5E80FA;">Terms</a><span class="footer-divider"
+      style="color: #5E80FA; margin: 0 8px;">|</span> -->
+        <a href="https://www.rentersbp.com" style="text-decoration: none; color: #5E80FA;">Website</a>
+      </p>
+      <p
+        style="margin-top: 20px; opacity: 0.8;font-family:'Helvetica Neue', Arial, sans-serif !important;line-height: 1.6;">
+        © 2025
+        RBP Club. Empowering renters nationwide.</p>
+    </div>
+    <!-- <div style="text-align: center; color: #000000; font-size: 14px; max-width: 600px; padding-top: 25px;">
+      Copyright © 2025. All Rights Reserved.
+    </div> -->
+  </div>
+</body>
+
+</html>

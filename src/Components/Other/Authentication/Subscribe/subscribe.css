@@ -1,0 +1,7 @@
+.selected {
+  color: white;
+}
+
+.hoverSelected :hover {
+  color: white;
+}
