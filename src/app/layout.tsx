@@ -4,10 +4,11 @@ import MainProvider from "./MainProvider";
 import { I18nProvider } from "./i18n/i18n-context";
 import { detectLanguage } from "./i18n/server";
 import SessionWrapper from "@/CommonComponent/SessionWrapper";
-import { authoption } from "./api/auth/[...nextauth]/authOption";
+import { authoption } from "@/lib/authOptions";
 import { getServerSession } from "next-auth";
 import { ToastContainer } from "react-toastify";
 import { Metadata } from 'next';
+import Error403Container from "@/Components/Other/Error/Error403";
 
 export const metadata: Metadata = {
   title: 'Renters Benefit Package | Save Money & Build Credit',
@@ -46,7 +47,11 @@ export default async function RootLayout({
   const session = await getServerSession(authoption);
   console.log("session",session)
   const tokenizationURL = process.env.NEXT_PUBLIC_BANQUEST_TOKENIZATION_URL;
-  console.log("tokenizationURL",tokenizationURL)
+
+  if (!session) {
+  // Maybe redirect, or show an auth error
+  return <Error403Container />; 
+}
 
   return (
     <I18nProvider language={lng}>
