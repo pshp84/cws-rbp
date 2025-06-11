@@ -72,7 +72,7 @@ export default async function RootLayout({
           <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet" />
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjeJEPREBQFvAIqDSZliF0WjQrCld-Mh0"></script>
           <script src={tokenizationURL}></script>
-          <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+          {/* <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script> */}
         </head>
         <body suppressHydrationWarning={true}>
           <NoSsr>
