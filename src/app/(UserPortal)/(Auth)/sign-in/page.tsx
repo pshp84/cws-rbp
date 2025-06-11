@@ -148,7 +148,7 @@ const userSignInPage = () => {
       last_name: lastName,
     } = userData;
 
-    if (userRole == userRoles.User) {
+    if (userRole == userRoles.User) { 
       const membershipData = await getUserMembership(userID);
       if (typeof membershipData == "boolean" && !membershipData) {
         let errorMessage = "It seems your membership is not active or available at the moment. Please contact our support team.";
