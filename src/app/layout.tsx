@@ -48,11 +48,6 @@ export default async function RootLayout({
   console.log("session",session)
   const tokenizationURL = process.env.NEXT_PUBLIC_BANQUEST_TOKENIZATION_URL;
 
-  if (!session) {
-  // Maybe redirect, or show an auth error
-  return <Error403Container />; 
-}
-
   return (
     <I18nProvider language={lng}>
       <html>
