@@ -4,7 +4,7 @@ import MainProvider from "./MainProvider";
 import { I18nProvider } from "./i18n/i18n-context";
 import { detectLanguage } from "./i18n/server";
 import SessionWrapper from "@/CommonComponent/SessionWrapper";
-import { authoption } from "@/lib/authOptions";
+import { authoption } from "./api/auth/[...nextauth]/authOption";
 import { getServerSession } from "next-auth";
 import { ToastContainer } from "react-toastify";
 import { Metadata } from 'next';
