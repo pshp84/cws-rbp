@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 interface SignUpEnrollment {
   proceedBtnAction: (userData: any) => void;
   backBtnAction: (previousStep: string) => void;
-  resetTurnstile?: number;
+  //resetTurnstile?: number;
   disableBackBtn?: boolean;
   userSignUpData?: {
     firstName?: string;
@@ -26,7 +26,7 @@ const SignUpEnrollment: React.FC<SignUpEnrollment> = (props) => {
     backBtnAction,
     userSignUpData,
     disableBackBtn = false,
-    resetTurnstile = 0,
+    //resetTurnstile = 0,
   } = props;
   const [turnstileToken, setTurnstileToken] = useState<string>();
   const [firstName, setFirstName] = useState<string>();
@@ -55,10 +55,10 @@ const SignUpEnrollment: React.FC<SignUpEnrollment> = (props) => {
   const formHandler = (e: any) => {
     e.preventDefault();
 
-    if (!turnstileToken) {
-      toast.error("Please complete the CAPTCHA.");
-      return;
-    }
+    // if (!turnstileToken) {
+    //   toast.error("Please complete the CAPTCHA.");
+    //   return;
+    // }
 
     let isError: boolean = false;
     let validationError = validation;
@@ -371,11 +371,11 @@ const SignUpEnrollment: React.FC<SignUpEnrollment> = (props) => {
           {phoneNumberOptIn && <small className="mt-2 d-block" style={{ fontSize: "12px" }}><i>By opting in, you agree to receive SMS updates and promotions. Message and data rates may apply. See our <Link style={{ fontSize: "12px" }} href={process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL ?? `https://www.rentersbp.com/contact`} target="_blank">Privacy Policy</Link> for details.</i></small>}
         </div>
       </div>
-      <TurnstileWrapper
+      {/* <TurnstileWrapper
         key={resetTurnstile}
         onVerify={setTurnstileToken}
         className="mb-5 mb-md-0"
-      />
+      /> */}
 
       <div
         className={`signup-action-bar position-absolute mt-4 w-100 d-flex justify-content-${!disableBackBtn ? `between` : `end`

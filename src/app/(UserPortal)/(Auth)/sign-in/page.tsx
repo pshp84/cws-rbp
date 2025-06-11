@@ -37,15 +37,15 @@ const userSignInPage = () => {
   });
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-  const resetTurnstile = () => {
-    setTurnstileKey((prevKey) => prevKey + 1);
-  };
+  // const resetTurnstile = () => {
+  //   setTurnstileKey((prevKey) => prevKey + 1);
+  // };
 
   const handleLogin = async () => {
-    if (!turnstileToken) {
-      toast.error("Please complete the CAPTCHA.");
-      return;
-    }
+    // if (!turnstileToken) {
+    //   toast.error("Please complete the CAPTCHA.");
+    //   return;
+    // }
 
     let isError = false;
     let validationData: loginValidation = {
@@ -75,22 +75,22 @@ const userSignInPage = () => {
 
     setIsLoading(true);
 
-    try {
-      const verifyTurnstile = await rbpApiCall.post("/verify-turnstile", {
-        turnstileToken,
-      });
-      if (!verifyTurnstile.data.success) {
-        toast.error("CAPTCHA verification failed. Please try again.");
-        resetTurnstile();
-        setIsLoading(false);
-        return;
-      }
-    } catch (error) {
-      toast.error("CAPTCHA verification failed. Please try again.");
-      resetTurnstile();
-      setIsLoading(false);
-      return;
-    }
+    // try {
+    //   const verifyTurnstile = await rbpApiCall.post("/verify-turnstile", {
+    //     turnstileToken,
+    //   });
+    //   if (!verifyTurnstile.data.success) {
+    //     toast.error("CAPTCHA verification failed. Please try again.");
+    //     resetTurnstile();
+    //     setIsLoading(false);
+    //     return;
+    //   }
+    // } catch (error) {
+    //   toast.error("CAPTCHA verification failed. Please try again.");
+    //   resetTurnstile();
+    //   setIsLoading(false);
+    //   return;
+    // }
 
     const { data, error } = await dbClient.auth.signInWithPassword({
       email: email,
@@ -98,7 +98,7 @@ const userSignInPage = () => {
     });
 
     if (error) {
-      resetTurnstile();
+      //resetTurnstile();
       setIsLoading(false);
       toast.error(`${error.message}.`);
       return;
@@ -110,7 +110,7 @@ const userSignInPage = () => {
     } = data;
 
     if (!access_token || !refresh_token || !userID) {
-      resetTurnstile();
+      //resetTurnstile();
       toast.error("Something is wrong! please try again.");
       setIsLoading(false);
       return;
@@ -122,7 +122,7 @@ const userSignInPage = () => {
     });
 
     if (sessionError) {
-      resetTurnstile();
+      //resetTurnstile();
       toast.error(sessionError.message);
       setIsLoading(false);
       return;
@@ -136,7 +136,7 @@ const userSignInPage = () => {
 
     if (userError) {
       await dbClient.auth.signOut();
-      resetTurnstile();
+      //resetTurnstile();
       toast.error(userError.message);
       setIsLoading(false);
       return;
@@ -167,7 +167,7 @@ const userSignInPage = () => {
               break;
           }
           await dbClient.auth.signOut();
-          resetTurnstile();
+          //resetTurnstile();
           toast.error(errorMessage, {
             toastId: "error2",
           });
@@ -184,7 +184,7 @@ const userSignInPage = () => {
 
       if (membershipData.status !== membershipStatus.Active) {
         await dbClient.auth.signOut();
-        resetTurnstile();
+        //resetTurnstile();
         toast.error(
           `It seems your membership is not active. Please contact our support team to resolve this issue.`,
           { toastId: "error3" }
@@ -374,7 +374,7 @@ const userSignInPage = () => {
                       Forgot Password?
                     </Link>
                   </div>
-                  <TurnstileWrapper key={turnstileKey} onVerify={setTurnstileToken} />
+                  {/* <TurnstileWrapper key={turnstileKey} onVerify={setTurnstileToken} /> */}
                   <button
                     onClick={(e) => handleLogin()}
                     className="btn btn-primary w-100 mb-3 py-2"
