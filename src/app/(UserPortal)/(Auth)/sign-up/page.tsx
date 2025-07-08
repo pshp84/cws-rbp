@@ -82,7 +82,7 @@ const userSignUpPage = () => {
   const [activeStep, setActiveStep] = useState<string>("plan");
   const [userSignUpData, setUserSignUpData] = useState<
     | {
-        turnstileToken?: string;
+        //turnstileToken?: string;
         firstName: string;
         lastName: string;
         email: string;
@@ -348,7 +348,7 @@ const userSignUpPage = () => {
       password,
       firstName,
       lastName,
-      turnstileToken,
+      //turnstileToken,
       phoneNumber,
       emailOptIn,
       phoneNumberOptIn,
@@ -358,29 +358,29 @@ const userSignUpPage = () => {
       !password ||
       !firstName ||
       !lastName ||
-      !turnstileToken ||
+      //!turnstileToken ||
       !phoneNumber
     )
       return false;
 
     setIsLoading(true);
 
-    try {
-      const verifyTurnstile = await rbpApiCall.post("/verify-turnstile", {
-        turnstileToken,
-      });
-      if (!verifyTurnstile.data.success) {
-        resetTurnstile();
-        toast.error("CAPTCHA verification failed. Please try again.");
-        setIsLoading(false);
-        return;
-      }
-    } catch (error) {
-      resetTurnstile();
-      toast.error("CAPTCHA verification failed. Please try again.");
-      setIsLoading(false);
-      return;
-    }
+    // try {
+    //   const verifyTurnstile = await rbpApiCall.post("/verify-turnstile", {
+    //     turnstileToken,
+    //   });
+    //   if (!verifyTurnstile.data.success) {
+    //     resetTurnstile();
+    //     toast.error("CAPTCHA verification failed. Please try again.");
+    //     setIsLoading(false);
+    //     return;
+    //   }
+    // } catch (error) {
+    //   resetTurnstile();
+    //   toast.error("CAPTCHA verification failed. Please try again.");
+    //   setIsLoading(false);
+    //   return;
+    // }
 
     const redirectURL = getEmailRedirectToURL();
     const { data, error } = await dbClient.auth.signUp({
@@ -399,7 +399,7 @@ const userSignUpPage = () => {
     });
 
     if (error) {
-      resetTurnstile();
+      //resetTurnstile();
       toast.error("Something is wrong! please try again.");
       setIsLoading(false);
       return false;
@@ -1022,7 +1022,7 @@ const userSignUpPage = () => {
                 {activeStep == "enrollment" && (
                   <SignUpEnrollment
                     backBtnAction={setActiveStep}
-                    resetTurnstile={turnstileKey}
+                    //resetTurnstile={turnstileKey}
                     proceedBtnAction={setUserSignUpData}
                     userSignUpData={userSignUpData}
                     disableBackBtn={selectedPlan == 4 ? true : false}

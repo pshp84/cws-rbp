@@ -14,7 +14,7 @@ export const LogoWrapper = () => {
     <>
       <div className="logo-wrapper">
         <Link href={`/pages/dashboard`} >
-          <img style={{verticalAlign:"top", paddingTop:"3px"}} className="img-fluid" src={`${ImagePath}/logo/logoWhite.png`} alt="" />
+          {/* <img style={{verticalAlign:"top", paddingTop:"3px"}} className="img-fluid" src={`${ImagePath}/logo/logoWhite.png`} alt="" /> */}
           <span className="textSetup" style={{
    fontWeight:500,
     fontSize: `26px`

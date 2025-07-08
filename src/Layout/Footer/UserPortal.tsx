@@ -8,30 +8,30 @@ const UserPortalFooter = () => {
         <div className="user-footer-links py-5">
             <div className="container py-5">
                 <div className="row">
-                    <div className="col-12 col-md-2 footer-logo mb-4 mb-md-0">
+                    {/* <div className="col-12 col-md-2 footer-logo mb-4 mb-md-0">
                         <Link href={`#`} className="logo text-white d-flex gap-2 align-items-center">
                             <img style={{width: 80, height : 80}} src={`/assets/images/logo/RBPLogoMain.png`} alt="RBP Club" />
                         </Link>
-                    </div>
+                    </div> */}
                     {/* Quick Links */}
                     <div className="col-6 col-sm-4 col-md-3 footer-quick-links mb-4 mb-md-0">
                         <h5 className="mb-2 mb-md-4 text-uppercase text-green">Quick Links</h5>
                         <ul className="list-unstyled m-0">
                             <li className="py-1">
-                                <Link href={`https://www.rentersbp.com/`} className="text-white">Home</Link>
+                                <Link href={`#`} className="text-white">Home</Link>
                             </li>
                           
                             <li className="py-1">
-                                <Link href={`https://www.rentersbp.com/about`} className="text-white">About</Link>
+                                <Link href={`#`} className="text-white">About</Link>
                             </li>
                             <li className="py-1">
-                                <Link href={`https://www.rentersbp.com/benefits`} className="text-white">Benefits</Link>
+                                <Link href={`#`} className="text-white">Benefits</Link>
                             </li>
                             <li className="py-1">
-                                <Link href={`https://www.rentersbp.com/about#Landlords`} className="text-white">Landlords</Link>
+                                <Link href={`#`} className="text-white">Landlords</Link>
                             </li>
                             <li className="py-1">
-                                <Link href={`https://www.rentersbp.com/contact`} className="text-white">Contact</Link>
+                                <Link href={`#`} className="text-white">Contact</Link>
                             </li>
                         </ul>
                     </div>
@@ -53,13 +53,13 @@ const UserPortalFooter = () => {
                                 {/* <FaPhoneAlt className="text-green" outline/> */}
                                     {/* <i className="fa fa-phone text-green"></i> */}
                                     <BsTelephone className="text-green"/>
-                                    <span>(727)200-6252</span>
+                                    <span>+919537120913</span>
                                 </Link>
                             </li>
                             <li className="py-1">
                                 <Link href={`mailto:customercare@rentersbp.com`} className="text-white d-flex align-items-center gap-2">
                                     <i className="fa fa-send-o text-green"></i>
-                                    <span>customercare@rentersbp.com</span>
+                                    <span>info@prishusoft.com</span>
                                 </Link>
                             </li>
                         </ul>
@@ -75,7 +75,7 @@ const UserPortalFooter = () => {
                 <div className="px-4">
                 <div className="row">
                     <div className="col-md-6 mb-3 mb-md-0">
-                        <p className="m-0"><b>RBP</b> &copy; 2024. All rights reserved. Website by <Link href={`#`} target="_blank" className="text-dark text-decoration-underline">CWS</Link></p>
+                        <p className="m-0"><b>RBP</b> &copy; 2024. All rights reserved. Website by <Link href={`#`} target="_self" className="text-dark text-decoration-underline">CWS</Link></p>
                     </div>
                     <div className="col-md-6 text-md-end">
                         <p className="m-0 text-primary">*Certain terms and conditions may apply</p>

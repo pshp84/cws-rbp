@@ -112,7 +112,7 @@ const SignUpEnrollment: React.FC<SignUpEnrollment> = (props) => {
     }
 
     proceedBtnAction({
-      turnstileToken,
+      //turnstileToken,
       firstName,
       lastName,
       email,

@@ -19,7 +19,6 @@ const SignUpPlans: React.FC<SignUpPlans> = (props) => {
   const { onSelectedPlan , planId } = props;
   const [isLoading, setIsLoading] = useState<boolean>(!plansCache.data);
   const [plansData, setPlansData] = useState<Array<any>>(plansCache.data || []);
-  console.log("plansData",plansData)
   const [disabled,setDisabled] = useState<boolean>(false);
 
   const fetchPlansData = async () => {

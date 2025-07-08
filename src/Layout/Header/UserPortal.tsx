@@ -72,14 +72,14 @@ const UserPortalHeader = () => {
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <Link
-            href={isAuthPage?`https://www.rentersbp.com/`:`/dashboard`}
-            target={isAuthPage?`_blank`:`_self`}
+            href={isAuthPage?`#`:`/dashboard`}
+            target={isAuthPage?`_self`:`_self`}
             className="logo text-white d-flex gap-2 align-items-center"
           >
-            <img
+            {/* <img
               src={`/assets/images/logo/logoWhite.png`}
               alt="RBP Club Logo"
-            />
+            /> */}
             <span>RBP Club</span>
           </Link>
           
@@ -89,7 +89,7 @@ const UserPortalHeader = () => {
              <ul className="nav gap-2 justify-content-end d-none d-md-flex ms-auto">
               <li className="nav-item">
                 <Link
-                  href={`https://www.rentersbp.com/`}
+                  href={`#`}
                   className={`nav-link ${
                     pathname.startsWith("/dashboard") ? `active` : ``
                   }`}
@@ -100,7 +100,7 @@ const UserPortalHeader = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href={`https://www.rentersbp.com/about`}
+                  href={`#`}
                   className={`nav-link ${
                     pathname.startsWith("/deals") ? `active` : ``
                   }`}
@@ -111,7 +111,7 @@ const UserPortalHeader = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href={`https://www.rentersbp.com/benefits`}
+                  href={`#`}
                   className={`nav-link ${
                     pathname.startsWith("/reward-points") ? `active` : ``
                   }`}
@@ -122,20 +122,20 @@ const UserPortalHeader = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href={`https://www.rentersbp.com/about#Landlords`}
+                  href={`#`}
                   style={{ letterSpacing: "normal" }}
                   className="nav-link"
-                  target="_blank"
+                  target="_self"
                 >
                  Landlords
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  href={`https://www.rentersbp.com/contact`}
+                  href={`#`}
                   style={{ letterSpacing: "normal" }}
                   className="nav-link"
-                  target="_blank"
+                  target="_self"
                 >
                  Contact
                 </Link>
